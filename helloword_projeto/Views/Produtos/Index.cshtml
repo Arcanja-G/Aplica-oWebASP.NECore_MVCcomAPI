@@ -1,0 +1,46 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+	ViewData["Title"] = "Produtos";
+}
+
+<partial name="_Notificacoes" />
+    
+
+
+
+<h1>Produtos</h1>
+
+<a asp-controller="Produtos" asp-action="Adicionar">Adicionar Produtos</a>
+
+
+<table class="table table-striped table-hover w-75">
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>Nome</th>
+        <th>Preço</th>
+        <td class="text-rigth">Ações</td>
+    </tr>
+    </thead>
+    <tbody>
+        @foreach (var prod in Model)
+        {
+            <tr>
+                <td>@prod.Id</td>
+                <td> @prod.Nome</td>
+                <td> @prod.Preco</td>
+                <td class="text-end">
+                    <a asp-action="Editar" asp-route-id="@prod.Id" class="btn btn-primary">Editar</a>
+                    <a asp-action="Apagar" asp-route-id="@prod.Id" class="btn btn-outline-danger">Apagar</a>
+               
+                </td>
+               
+            </tr>
+        }
+
+
+    </tbody>
+</table>
+
