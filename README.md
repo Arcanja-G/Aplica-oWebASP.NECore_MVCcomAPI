@@ -1,4 +1,4 @@
-# helloword_solucao
+
 
 Solução ASP.NET Core desenvolvida em .NET 9, composta por uma aplicação
 web MVC e uma API REST, com ligação a base de dados SQL Server via
